@@ -64,20 +64,12 @@ namespace DarkForestGame.Systems
         /// <summary>
         /// Simulates a turn in the game.
         /// </summary>
-        public void SimulateTurn()
+        public void UpdatePlayerStatus(Player player)
         {
             CurrentTurn++;
-
-            foreach (var civ in Civilizations)
-            {
-                ProcessCivilizationTurn(civ);
-            }
-
+            ProcessCivilizationTurn(player.Civilization);
             // Handle interactions between civilizations.
             HandleInteractions();
-
-            // Fire the TurnEnded event
-            OnTurnEnded(new TurnEndedEventArgs { TurnNumber = CurrentTurn });
         }
 
         protected virtual void OnTurnEnded(TurnEndedEventArgs e)
@@ -122,6 +114,5 @@ namespace DarkForestGame.Systems
             // Implement detection, diplomacy, and warfare mechanics
         }
 
-        // Remove any direct Console.WriteLine statements
     }
 }

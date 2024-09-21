@@ -49,18 +49,14 @@ namespace DarkForestGame.UI
                 // Handle player input
                 foreach (var player in galaxy.Players)
                 {
+                    galaxy.UpdatePlayerStatus(player);
                     HandlePlayerTurn(player);
                 }
 
                 // Simulate a turn
-                galaxy.SimulateTurn();
 
                 // Check game status
                 gameRunning = CheckGameStatus();
-
-                // Wait for user input before proceeding to the next turn
-                AnsiConsole.Markup("[bold yellow]Press [green]Enter[/] to continue to the next turn...[/]");
-                Console.ReadLine();
             }
         }
 
@@ -82,7 +78,7 @@ namespace DarkForestGame.UI
             {
                 endTurn = DisplayPossibleActions(player);
             }
-
+            InnerOnTurnEnded();
             player.NewOngoingTaskCreated -= OnNewOngoingTaskCreated;
         }
 
@@ -459,9 +455,16 @@ namespace DarkForestGame.UI
             }
         }
 
+        private void InnerOnTurnEnded()
+        {
+            AnsiConsole.Clear();
+            // Wait for user input before proceeding to the next turn
+            AnsiConsole.Markup("[bold yellow]Press [green]Enter[/] to continue to the next turn...[/]");
+            Console.ReadLine();
+        }
         private void OnTurnEnded(object sender, TurnEndedEventArgs e)
         {
-            // Optional: Add end-of-turn notifications
+            InnerOnTurnEnded();
         }
 
         private void OnShipBuilt(object sender, ShipBuiltEventArgs e)
