@@ -1,6 +1,7 @@
 # .NET Core & ASP.NET Core
 bin/
 obj/
+obj/*
 project.lock.json
 project.fragment.lock.json
 artifacts/
@@ -83,3 +84,5 @@ secrets.json
 .idea/*
 
 # End of file
+.gitignore
+.gitignore
