@@ -14,6 +14,11 @@ namespace DarkForestGame.Events
         public GameTask CompletedTask { get; set; }
     }
 
+    public class TaskCreatedEventArgs : EventArgs
+    {
+        public GameTask CompletedTask { get; set; }
+    }
+
     public class ShipBuiltEventArgs : EventArgs
     {
         public Ship NewShip { get; set; }
@@ -29,4 +34,5 @@ namespace DarkForestGame.Events
     public delegate void TaskCompletedEventHandler(object sender, TaskCompletedEventArgs e);
     public delegate void ShipBuiltEventHandler(object sender, ShipBuiltEventArgs e);
     public delegate void PlanetColonizedEventHandler(object sender, PlanetColonizedEventArgs e);
+    public delegate void TaskCreatedEventHandler(object sender, TaskCreatedEventArgs e);
 }
