@@ -15,7 +15,7 @@ namespace DarkForestGame.UI
     public class GameUI
     {
         private Galaxy galaxy;
-
+        private Grid playerStatsGrid;
         public GameUI(Galaxy galaxy)
         {
             this.galaxy = galaxy;
@@ -39,6 +39,7 @@ namespace DarkForestGame.UI
 
         public void StartGameLoop()
         {
+
             bool gameRunning = true;
             while (gameRunning)
             {
@@ -65,6 +66,7 @@ namespace DarkForestGame.UI
 
         private void HandlePlayerTurn(Player player)
         {
+            player.NewOngoingTaskCreated += OnNewOngoingTaskCreated;
             // Clear the console for the player's turn
             AnsiConsole.Clear();
 
@@ -79,6 +81,18 @@ namespace DarkForestGame.UI
             while (!endTurn)
             {
                 endTurn = DisplayPossibleActions(player);
+            }
+
+            player.NewOngoingTaskCreated -= OnNewOngoingTaskCreated;
+        }
+
+        private void OnNewOngoingTaskCreated(object sender, TaskCreatedEventArgs e)
+        {
+            AnsiConsole.Clear();
+            if (sender is Player player)
+            {
+                DisplayMap(player.Civilization);
+                DisplayPlayerStats(player.Civilization);
             }
         }
 

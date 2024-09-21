@@ -1,6 +1,7 @@
 // File: Player.cs
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using DarkForestGame.Entities;
 using DarkForestGame.Events;
 using DarkForestGame.Systems;
@@ -20,6 +21,7 @@ namespace DarkForestGame
         // Events
         public event ShipBuiltEventHandler ShipBuilt;
         public event PlanetColonizedEventHandler PlanetColonized;
+        public event TaskCreatedEventHandler NewOngoingTaskCreated;
 
         /// <summary>
         /// Initializes a new instance of the Player class.
@@ -31,6 +33,7 @@ namespace DarkForestGame
 
             // Initialize the player's starting resources.
             Civilization.Resources = new Resource(minerals: 1000, energy: 500, intelligence: 100);
+            Civilization.OngoingTasks.CollectionChanged += OngoingTasksCollectionChanged;
         }
 
         // Methods for player actions.
@@ -68,7 +71,6 @@ namespace DarkForestGame
                     }
                 );
                 Civilization.OngoingTasks.Add(researchTask);
-
                 return true;
             }
             else
@@ -120,7 +122,6 @@ namespace DarkForestGame
                     }
                 );
                 Civilization.OngoingTasks.Add(buildTask);
-
                 return true;
             }
             else
@@ -128,6 +129,12 @@ namespace DarkForestGame
                 // Not enough minerals
                 return false;
             }
+        }
+
+        private void OngoingTasksCollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+        {
+            var eventArgs = new TaskCreatedEventArgs();
+            NewOngoingTaskCreated?.Invoke(this, eventArgs);
         }
 
         /// <summary>
@@ -179,7 +186,6 @@ namespace DarkForestGame
                 }
             );
             Civilization.OngoingTasks.Add(colonizeTask);
-
             return true;
         }
 
