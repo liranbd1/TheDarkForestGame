@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3JYBegV4tNJh9CdxAWwl8QKnAdycOsPZ3s+hMnNT/M4BuBBwdRo4sxV5qm9qTXt+bUvkoi3Hb1e/D8HG5LZZ3w==",
+  "success": true,
+  "projectFilePath": "/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/DarkForestGame.csproj",
+  "expectedPackageFiles": [
+    "/Users/liran/.nuget/packages/spectre.console/0.44.0/spectre.console.0.44.0.nupkg.sha512"
+  ],
+  "logs": []
+}

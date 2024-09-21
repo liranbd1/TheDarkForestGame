@@ -1,0 +1,17 @@
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/bin/Debug/net8.0/DarkForestGame
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/bin/Debug/net8.0/DarkForestGame.deps.json
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/bin/Debug/net8.0/DarkForestGame.runtimeconfig.json
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/bin/Debug/net8.0/DarkForestGame.dll
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/bin/Debug/net8.0/DarkForestGame.pdb
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/bin/Debug/net8.0/Spectre.Console.dll
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.csproj.AssemblyReference.cache
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.AssemblyInfoInputs.cache
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.AssemblyInfo.cs
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.csproj.CoreCompileInputs.cache
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.csproj.CopyComplete
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.dll
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/refint/DarkForestGame.dll
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.pdb
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/DarkForestGame.genruntimeconfig.cache
+/Users/liran/Desktop/Developement.nosync/C#/Dark Forest/DarkForestGame/obj/Debug/net8.0/ref/DarkForestGame.dll
