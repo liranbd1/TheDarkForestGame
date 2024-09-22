@@ -10,7 +10,7 @@ namespace DarkForestGame.Entities
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public Planet Planet { get; set; }
+        public Planet? Planet { get; set; }
         public List<Ship> Ships { get; set; }
 
         public GalaxyCell(int x, int y)

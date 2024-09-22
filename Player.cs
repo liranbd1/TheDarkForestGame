@@ -29,10 +29,12 @@ namespace DarkForestGame
         public Player(string civilizationName, TechTree techTree, CivilizationTraits traits)
         {
             // Create the player's civilization.
-            Civilization = new Civilization(civilizationName, techTree, traits, ControlType.Human);
+            Civilization = new Civilization(civilizationName, techTree, traits, ControlType.Human)
+            {
+                // Initialize the player's starting resources.
+                Resources = new Resource(minerals: 1000, energy: 500, intelligence: 100)
+            };
 
-            // Initialize the player's starting resources.
-            Civilization.Resources = new Resource(minerals: 1000, energy: 500, intelligence: 100);
             Civilization.OngoingTasks.CollectionChanged += OngoingTasksCollectionChanged;
         }
 
