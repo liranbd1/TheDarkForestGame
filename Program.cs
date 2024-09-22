@@ -9,20 +9,23 @@ namespace DarkForestGame
 {
     class Program
     {
+        private static GameManager? gameManager;
         static void Main(string[] args)
         {
+            gameManager = new GameManager();
+            gameManager.StartGame();
             // Initialize the galaxy.
-            int galaxyWidth = 20;
-            int galaxyHeight = 20;
-            Galaxy galaxy = new Galaxy(galaxyWidth, galaxyHeight);
+            // int galaxyWidth = 20;
+            // int galaxyHeight = 20;
+            // Galaxy galaxy = new Galaxy(galaxyWidth, galaxyHeight);
 
-            // Initialize planets and other game elements.
-            InitializePlanets(galaxy);
-            InitializeCivilizations(galaxy);
+            // // Initialize planets and other game elements.
+            // InitializePlanets(galaxy);
+            // InitializeCivilizations(galaxy);
 
-            // Create the GUI and start the game loop
-            GameUI gameUI = new GameUI(galaxy);
-            gameUI.StartGameLoop();
+            // // Create the GUI and start the game loop
+            // GameUI gameUI = new GameUI(galaxy);
+            // gameUI.StartGameLoop();
         }
 
         static void InitializeCivilizations(Galaxy galaxy)
