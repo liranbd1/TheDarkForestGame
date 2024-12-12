@@ -1,6 +1,7 @@
 // File: Entities/Civilization.cs
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace DarkForestGame.Entities
 {
@@ -21,7 +22,7 @@ namespace DarkForestGame.Entities
         public Dictionary<string, Technology> ResearchedTechnologies { get; set; }
         public CivilizationTraits Traits { get; set; }
         public ControlType ControlType { get; set; }
-        public List<GameTask> OngoingTasks { get; set; }
+        public ObservableCollection<GameTask> OngoingTasks { get; set; }
 
         public Civilization(string name, TechTree techTree, CivilizationTraits traits, ControlType controlType)
         {
@@ -37,7 +38,7 @@ namespace DarkForestGame.Entities
             ResearchedTechnologies = new Dictionary<string, Technology>();
             Traits = traits;
             ControlType = controlType;
-            OngoingTasks = new List<GameTask>();
+            OngoingTasks = new ObservableCollection<GameTask>();
         }
     }
 }
